@@ -13,6 +13,10 @@
 		C2032FD62BB0AE00009BD9B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2032FD42BB0AE00009BD9B9 /* Main.storyboard */; };
 		C2032FD82BB0AE01009BD9B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2032FD72BB0AE01009BD9B9 /* Assets.xcassets */; };
 		C2032FDB2BB0AE01009BD9B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2032FD92BB0AE01009BD9B9 /* LaunchScreen.storyboard */; };
+		C21ABDC42BB0F58200E4A597 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC32BB0F58200E4A597 /* QuizViewController.swift */; };
+		C21ABDC62BB1076700E4A597 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC52BB1076700E4A597 /* Quiz.swift */; };
+		C21ABDC82BB1095600E4A597 /* QuestionBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */; };
+		C21ABDCA2BB109D700E4A597 /* QuestionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		C2032FD72BB0AE01009BD9B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2032FDA2BB0AE01009BD9B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2032FDC2BB0AE01009BD9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C21ABDC32BB0F58200E4A597 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		C21ABDC52BB1076700E4A597 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankViewController.swift; sourceTree = "<group>"; };
+		C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				C2032FD72BB0AE01009BD9B9 /* Assets.xcassets */,
 				C2032FD92BB0AE01009BD9B9 /* LaunchScreen.storyboard */,
 				C2032FDC2BB0AE01009BD9B9 /* Info.plist */,
+				C21ABDC32BB0F58200E4A597 /* QuizViewController.swift */,
+				C21ABDC52BB1076700E4A597 /* Quiz.swift */,
+				C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */,
+				C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */,
 			);
 			path = quizApp;
 			sourceTree = "<group>";
@@ -111,6 +123,9 @@
 				Base,
 			);
 			mainGroup = C2032FC22BB0AE00009BD9B9;
+			packageReferences = (
+				C21ABDC02BB0F30B00E4A597 /* XCRemoteSwiftPackageReference "DLRadioButton" */,
+			);
 			productRefGroup = C2032FCC2BB0AE00009BD9B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +154,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2032FD32BB0AE00009BD9B9 /* ViewController.swift in Sources */,
+				C21ABDC62BB1076700E4A597 /* Quiz.swift in Sources */,
 				C2032FCF2BB0AE00009BD9B9 /* AppDelegate.swift in Sources */,
 				C2032FD12BB0AE00009BD9B9 /* SceneDelegate.swift in Sources */,
+				C21ABDCA2BB109D700E4A597 /* QuestionEditViewController.swift in Sources */,
+				C21ABDC82BB1095600E4A597 /* QuestionBankViewController.swift in Sources */,
+				C21ABDC42BB0F58200E4A597 /* QuizViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +375,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C21ABDC02BB0F30B00E4A597 /* XCRemoteSwiftPackageReference "DLRadioButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DavydLiu/DLRadioButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = C2032FC32BB0AE00009BD9B9 /* Project object */;
 }

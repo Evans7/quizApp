@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CF19F759-4C2A-4944-86F3-4393DCB8C052"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "quizApp/RadioButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "isChecked"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - 91d21e684c186472"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.isChecked.getter : Swift.Bool"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - 8b4e7da844d49c46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.isChecked.setter : Swift.Bool"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - b07ac8e1a1bf8271"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.isChecked.modify : Swift.Bool"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - ee1214cc8c4ecc46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.isChecked.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - 3315154dbc88eb37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.init(frame: __C.CGRect) -&gt; quizApp.RadioButton"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "1D01C8CA-E55E-47F3-BB11-BCCDC192FBED - 5c9e5c6e40795f7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "quizApp.RadioButton.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;quizApp.RadioButton&gt;"
+                  moduleName = "quizApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user235857/Desktop/quizApp/quizApp/RadioButton.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
