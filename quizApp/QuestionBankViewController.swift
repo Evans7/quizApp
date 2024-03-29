@@ -7,7 +7,27 @@
 
 import UIKit
 
-class QuestionBankViewController: UIViewController,UITableViewDataSource , UITableViewDelegate{
+class QuestionBankViewController: UIViewController,UITableViewDataSource , UITableViewDelegate,EditingQuizDelegate{
+    
+    
+    func editingQuizDidFinished(updatedQuiz: Quiz, indexForQuiz: Int) {
+        if(indexForQuiz != -1){
+            (UIApplication.shared.delegate as? AppDelegate)?.quizLet[indexForQuiz] = updatedQuiz
+            quizzes[indexForQuiz] = updatedQuiz
+        }
+        else {
+            quizzes.append(updatedQuiz)
+            (UIApplication.shared.delegate as? AppDelegate)?.quizLet.append(updatedQuiz)
+            
+        }
+        quizTable.reloadData()
+    }
+    
+    
+    func editingQuizDidCanceled() {
+    
+    }
+    
     
     
     @IBOutlet weak var quizTable: UITableView!
@@ -19,13 +39,39 @@ class QuestionBankViewController: UIViewController,UITableViewDataSource , UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quizzes")
-                
-                cell?.textLabel?.text = quizzes[indexPath.row].question
-    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quizzes") as? QuestionTableViewCell
+        let correctOption = quizzes[indexPath.row].correctOption
+        cell?.question.text = quizzes[indexPath.row].question
+        if(correctOption==1){
+            cell?.answer.text=quizzes[indexPath.row].option1
+            cell?.incorrect1.text=quizzes[indexPath.row].option2
+            cell?.incorrect2.text=quizzes[indexPath.row].option3
+            cell?.incorrect3.text=quizzes[indexPath.row].option4
+        }
+        else if(correctOption==2)
+        {
+            cell?.answer.text=quizzes[indexPath.row].option2
+            cell?.incorrect1.text=quizzes[indexPath.row].option1
+            cell?.incorrect2.text=quizzes[indexPath.row].option3
+            cell?.incorrect3.text=quizzes[indexPath.row].option4        }
+        else if(correctOption==3)
+        {
+            cell?.answer.text=quizzes[indexPath.row].option3
+            cell?.incorrect1.text=quizzes[indexPath.row].option1
+            cell?.incorrect2.text=quizzes[indexPath.row].option2
+            cell?.incorrect3.text=quizzes[indexPath.row].option4        }
+        else{
+            cell?.answer.text=quizzes[indexPath.row].option4
+            cell?.incorrect1.text=quizzes[indexPath.row].option1
+            cell?.incorrect2.text=quizzes[indexPath.row].option3
+            cell?.incorrect3.text=quizzes[indexPath.row].option2        }
                 return cell!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            // Return custom height for each row
+            return 250 // Change this to your desired height
+        }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "quizEdit" {
@@ -33,6 +79,12 @@ class QuestionBankViewController: UIViewController,UITableViewDataSource , UITab
                     if let indexPath = sender as? IndexPath {
                         let OHC = segue.destination as? QuestionEditViewController
                         OHC?.data = indexPath.row
+                        OHC!.delegate = self
+                        
+                    }
+                    else {
+                        let AQC = segue.destination as? QuestionEditViewController
+                        AQC!.delegate = self
                     }
                     
                 }
@@ -46,7 +98,7 @@ class QuestionBankViewController: UIViewController,UITableViewDataSource , UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "Question Bank"
         // Do any additional setup after loading the view.
     }
     

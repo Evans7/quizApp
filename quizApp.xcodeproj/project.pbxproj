@@ -17,6 +17,7 @@
 		C21ABDC62BB1076700E4A597 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC52BB1076700E4A597 /* Quiz.swift */; };
 		C21ABDC82BB1095600E4A597 /* QuestionBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */; };
 		C21ABDCA2BB109D700E4A597 /* QuestionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */; };
+		C28CAF6B2BB64AB8006C7DEC /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28CAF6A2BB64AB8006C7DEC /* QuestionTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C21ABDC52BB1076700E4A597 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankViewController.swift; sourceTree = "<group>"; };
 		C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionEditViewController.swift; sourceTree = "<group>"; };
+		C28CAF6A2BB64AB8006C7DEC /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				C21ABDC52BB1076700E4A597 /* Quiz.swift */,
 				C21ABDC72BB1095600E4A597 /* QuestionBankViewController.swift */,
 				C21ABDC92BB109D700E4A597 /* QuestionEditViewController.swift */,
+				C28CAF6A2BB64AB8006C7DEC /* QuestionTableViewCell.swift */,
 			);
 			path = quizApp;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2032FD32BB0AE00009BD9B9 /* ViewController.swift in Sources */,
+				C28CAF6B2BB64AB8006C7DEC /* QuestionTableViewCell.swift in Sources */,
 				C21ABDC62BB1076700E4A597 /* Quiz.swift in Sources */,
 				C2032FCF2BB0AE00009BD9B9 /* AppDelegate.swift in Sources */,
 				C2032FD12BB0AE00009BD9B9 /* SceneDelegate.swift in Sources */,

@@ -22,4 +22,13 @@ class Quiz{
         self.correctOption = correctOption
         }
     
+    init(){
+        self.question=""
+        self.option1=""
+        self.option2=""
+        self.option3=""
+        self.option4=""
+        self.correctOption = -1
+    }
+    
 }
