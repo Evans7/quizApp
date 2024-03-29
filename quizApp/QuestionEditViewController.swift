@@ -31,7 +31,6 @@ class QuestionEditViewController: UIViewController,UINavigationControllerDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Question Builder"
         // Do any additional setup after loading the view.
         
         if let recievedIndex = data {
@@ -60,18 +59,44 @@ class QuestionEditViewController: UIViewController,UINavigationControllerDelegat
     
     @IBAction func questionBuildingCompleted(_ sender: Any) {
         
-        updatedQuiz.question =  question.text!
-        updatedQuiz.option1 = firstOption.text!
-        updatedQuiz.option2 = secondOption.text!
-        updatedQuiz.option3 = thirdOption.text!
-        updatedQuiz.option4 = fourthOption.text!
-        updatedQuiz.correctOption = Int(correctOption.text!)!
-               
-        delegate?.editingQuizDidFinished(updatedQuiz: updatedQuiz, indexForQuiz:data!)
-                   
-        dismiss(animated: true)
         
+        var alert = UIAlertController();
+        if(question.text=="" || firstOption.text=="" || secondOption.text=="" || thirdOption.text=="" || fourthOption.text=="" || correctOption.text==""){
+            alert = UIAlertController(title: "Error", message: "Please enter all the input fields before saving", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Okay", style: .destructive))
+            
+        }
+        else if(!isInteger(correctOption.text!)){
+            alert = UIAlertController(title: "Error", message: "Entered Correct Option not in correct format", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Okay", style: .destructive))
+            
+        }
+        else if(Int(correctOption.text!)!<1 || Int(correctOption.text!)!>4){
+            alert = UIAlertController(title: "Error", message: "Entered Correct Option should be between 1 and 4", preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Okay", style: .destructive))
+            
+        }
+        else{
+            updatedQuiz.question =  question.text!
+            updatedQuiz.option1 = firstOption.text!
+            updatedQuiz.option2 = secondOption.text!
+            updatedQuiz.option3 = thirdOption.text!
+            updatedQuiz.option4 = fourthOption.text!
+            updatedQuiz.correctOption = Int(correctOption.text!)!
+            
+            delegate?.editingQuizDidFinished(updatedQuiz: updatedQuiz, indexForQuiz:data!)
+            
+            dismiss(animated: true)
+        }
+        present(alert, animated: true)
     }
+    
+    
+    func isInteger(_ str: String) -> Bool {
+           let regex = try! NSRegularExpression(pattern: "^\\d+$")
+           let matches = regex.matches(in: str, range: NSRange(str.startIndex..., in: str))
+           return !matches.isEmpty
+       }
     /*
     // MARK: - Navigation
 
